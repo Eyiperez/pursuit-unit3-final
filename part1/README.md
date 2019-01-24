@@ -7,6 +7,8 @@ In this part, you will be given code snippets and asked questions about those sn
 
 For each problem below, there will be starting code linked in a **REPL.it** snippet. Feel free to play around / debug in that snippet. Once you are happy with your solution, copy/paste your solution to a file named **exactly** what is requested in the problem.
 
+Each problem will require a corresponding **problem_1.js**, **problem_2.js**, etc. To submit Part I, zip up your 4 solution files and upload to canvas.
+
 ## Problem 1
 
 Add the following 2 routes to **[this express server](https://repl.it/@mottaquikarim/AvariciousWelcomeField):
@@ -43,4 +45,34 @@ Add `body-parser` middleware (already required) in the appropriate spot in **[th
 Copy and paste your solution from `index.js` in the **REPL** snippet into a file called **problem_2.js**. **THIS IS YOUR SOLLUTION TO THIS PROBLEM**.
 
 ### Resources
+
+To test, you can **cURL**:
+
+```
+$ curl -X POST ${YOUR_REPL_URL}/user
+```
+
+Be sure to swap the `${YOUR_REPL_URL}` to whatever is on the righthand side of your screen. For the response above, you want to get back a JSON response.
+
+## Problem 3
+
+The `user` routes for **[this express server](https://repl.it/@mottaquikarim/WindingNativeDatamart)** are not working! Implement a fix to ensure this works. Be sure to note the `user.js` file on the snippet above.
+
+Copy and paste your solution from **`user.js`** in the **REPL** snippet into a file called **problem_3.js**. **THIS IS YOUR SOLLUTION TO THIS PROBLEM**.
+
+
+### Resources
+
+To test, you can **cURL**:
+
+```
+$ curl -X POST ${YOUR_REPL_URL}/user
+$ curl -X GET ${YOUR_REPL_URL}/user/1
+$ curl -X PUT ${YOUR_REPL_URL}/user/1
+$ curl -X DELETE ${YOUR_REPL_URL}/user/1
+```
+
+Be sure to swap the `${YOUR_REPL_URL}` to whatever is on the righthand side of your screen. For all responses, you *want*: `{"success": true,}`
+
+
 
