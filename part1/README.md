@@ -7,7 +7,7 @@ In this part, you will be given code snippets and asked questions about those sn
 
 For each problem below, there will be starting code linked in a **REPL.it** snippet. Feel free to play around / debug in that snippet. Once you are happy with your solution, copy/paste your solution to a file named **exactly** what is requested in the problem.
 
-Each problem will require a corresponding **problem_1.js**, **problem_2.js**, etc. To submit Part I, zip up your 4 solution files and upload to canvas.
+Each problem will require a corresponding **problem_1.js**, **problem_2.js**, etc. To submit Part I, zip up your 4 solution files and upload to canvas. (Problem 4 will need a folder)
 
 ## Problem 1
 
@@ -74,5 +74,34 @@ $ curl -X DELETE ${YOUR_REPL_URL}/user/1
 
 Be sure to swap the `${YOUR_REPL_URL}` to whatever is on the righthand side of your screen. For all responses, you *want*: `{"success": true,}`
 
+## Problem 4
 
+Given an authenticator middleware, lock down the routes in **[this express server](https://repl.it/@mottaquikarim/ExcitingOffensiveEllipse)** to ensure they cannot be access publicly.
 
+This problem may require changes to multiple pages - copy and paste the content of the files that you changed into a **folder** called **problem_4**. **THIS IS YOUR SOLLUTION TO THIS PROBLEM**.
+
+### Resources
+
+To test, you can **cURL**:
+
+```
+$ curl -X POST ${YOUR_REPL_URL}/user
+```
+Expect 403
+
+```
+$ curl -X POST ${YOUR_REPL_URL}/user -H "Token: test"
+```
+Expect `{"success": true,}`
+
+```
+$ curl -X POST ${YOUR_REPL_URL}/post
+```
+Expect 403
+
+```
+$ curl -X POST ${YOUR_REPL_URL}/post -H "Token: test"
+```
+Expect `{"success": true,}`
+
+etc
