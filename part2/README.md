@@ -1,5 +1,5 @@
 # Pokemon API
-
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/bfd492a0ffb5b74d963e)
 ## Models:
 - Trainer
   - id
